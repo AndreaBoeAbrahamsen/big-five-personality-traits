@@ -137,6 +137,7 @@ export default {
         html2canvas(document.querySelector("#capture")).then(canvas => {
           var image = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");  
           window.location.href=image;
+          this.minimized = temp;
         });
       };
       var makeImage = makeImage.bind(this);
