@@ -32,10 +32,41 @@
             <div class="scoring">
               <div class="title" v-on:click="show(i, item)">
               {{broadTrait.facets[item].title}} 
-                <span class="symbole">{{scores[i][item] > 2 ? symbole.high : scores[i][item] < 2 ?  symbole.low : symbole.middle}}</span>
+                <!--<span class="symbole">{{scores[i][item] > 2 ? symbole.high : scores[i][item] < 2 ?  symbole.low : symbole.middle}}</span>-->
               </div>
               <div class="slider">
-                <input type='range' min="1" max="3" value="2" v-model="scores[i][item]"/>
+                <!--<input type='range' min="1" max="3" value="2" v-model="scores[i][item]"/>-->
+                
+                <div class="custom-radios">
+                  <div>
+                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-1'"
+                          v-bind:name="broadTrait.facets[item].title" v-bind:value="1" v-model="scores[i][item]">
+                    <label v-bind:for="broadTrait.facets[item].title + '-1'">
+                      <span>
+                        ⇓
+                      </span>
+                    </label>
+                  </div>
+
+                  <div>
+                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-2'" v-bind:name="broadTrait.facets[item].title" value="1" v-model="scores[i][item]" v-bind:value="2" v-model="scores[i][item]">
+                    <label v-bind:for="broadTrait.facets[item].title + '-2'">
+                      <span>
+                        =
+                      </span>
+                    </label>
+                  </div>
+
+                  <div>
+                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-3'" v-bind:name="broadTrait.facets[item].title" value="1" v-model="scores[i][item]" v-bind:value="3" v-model="scores[i][item]">
+                    <label v-bind:for="broadTrait.facets[item].title + '-3'">
+                      <span>
+                        ⇑
+                      </span>
+                    </label>
+                  </div>
+                </div>
+                
               </div>
             </div>
             <div class="description" v-if="showDescription[i][item]">
@@ -251,7 +282,8 @@ export default {
     
     .slider{
       padding-top: 5px;
-      max-width: 70px;
+      max-width: 100px;
+      width: 100px;
     }
   }
   
@@ -284,56 +316,73 @@ export default {
   }
 }
 
-//https://css-tricks.com/sliding-nightmare-understanding-range-input/?utm_source=CSS-Weekly&utm_campaign=Issue-296&utm_medium=email
-//Source: https://codepen.io/thebabydino/pen/qVQLzm
-$track-w: 100%;
-$track-h: 0.5em;
-$thumb-d: 1.5em;
-$thumb-wd: 2em;
 
-@mixin track() {
-	box-sizing: border-box;
-	border: none;
-	width: $track-w; height: $track-h;
-	background: #ccc;
-}
+// Radio buttons
+$color-1: #ffcc00;
+$color-2: #ff9b00;
+$color-3: #ff6600;
 
-@mixin thumb() {
-	box-sizing: border-box;
-	border: none;
-	width: 33.33%; 
-  height: $thumb-d;
-	border-radius: 5px;
-	background: #f90;
-}
+.custom-radios {
+  width: 100%;
+  height: 24px;
+  
+  div {
+    display: inline-block;
+    width: 33.33%;
+    height: 100%;
+    font-size: 15px;
+    
+    &:nth-child(1) input[type="radio"] + label{
+      background-color: $color-1;
+    } 
+    
+    &:nth-child(2) input[type="radio"] + label{
+      background-color: $color-2;
+    } 
+    
+    &:nth-child(3) input[type="radio"] + label{
+      background-color: $color-3;
+    } 
+    
+    &:nth-child(2) {
+     margin: 0 -5px;
+    }
+  }
 
-[type='range'] {
-	&, &::-webkit-slider-thumb {
-		-webkit-appearance: none;
-	}
-	
-	margin: 0;
-	padding: 0;
-	width: $track-w; height: $thumb-d;
-	background: transparent;
-	font: 1em/1 arial, sans-serif;
-	
-	&::-webkit-slider-runnable-track {
-		@include track
-	}
-	&::-moz-range-track { @include track }
-	&::-ms-track { @include track }
-	
-	&::-webkit-slider-thumb {
-		margin-top: .5*($track-h - $thumb-d);
-		@include thumb
-	}
-	&::-moz-range-thumb { @include thumb }
-	&::-ms-thumb {
-		margin-top: 0;
-		@include thumb
-	}
-	
-	&::-ms-tooltip { display: none }
+  input[type="radio"] {
+    display: none;
+
+    + label {
+      color: white;
+      font-family: Arial, sans-serif;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      border-radius: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      transform: scale(1, 0.5);
+      transition: all .1s ease;
+      vertical-align: middle;
+      line-height: 22px;
+
+      span {
+        opacity: 0;
+        vertical-align: middle;
+        transition: opacity .3s ease;
+      }
+    }
+
+    &:checked + label span {
+      opacity: 1;
+    }
+    
+    &:checked + label{
+      transform: scale(1, 1);
+      border-radius: 5px;
+    }
+  }
 }
 </style>
