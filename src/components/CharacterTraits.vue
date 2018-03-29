@@ -40,7 +40,7 @@
                 <div class="custom-radios">
                   <div>
                     <input type="radio" v-bind:id="broadTrait.facets[item].title + '-1'"
-                          v-bind:name="broadTrait.facets[item].title" v-bind:value="1" v-model="scores[i][item]">
+                      v-bind:name="broadTrait.facets[item].title" v-bind:value="1" v-model="scores[i][item]">
                     <label v-bind:for="broadTrait.facets[item].title + '-1'">
                       <span>
                         ⇓
@@ -49,7 +49,8 @@
                   </div>
 
                   <div>
-                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-2'" v-bind:name="broadTrait.facets[item].title" value="1" v-model="scores[i][item]" v-bind:value="2" v-model="scores[i][item]">
+                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-2'" 
+                      v-bind:name="broadTrait.facets[item].title" v-model="scores[i][item]" v-bind:value="2">
                     <label v-bind:for="broadTrait.facets[item].title + '-2'">
                       <span>
                         =
@@ -58,7 +59,8 @@
                   </div>
 
                   <div>
-                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-3'" v-bind:name="broadTrait.facets[item].title" value="1" v-model="scores[i][item]" v-bind:value="3" v-model="scores[i][item]">
+                    <input type="radio" v-bind:id="broadTrait.facets[item].title + '-3'" 
+                      v-bind:name="broadTrait.facets[item].title" v-model="scores[i][item]" v-bind:value="3">
                     <label v-bind:for="broadTrait.facets[item].title + '-3'">
                       <span>
                         ⇑
@@ -281,7 +283,7 @@ export default {
     }
     
     .slider{
-      padding-top: 5px;
+      padding: 5px 0;
       max-width: 100px;
       width: 100px;
     }
