@@ -71,7 +71,7 @@
                 
               </div>
             </div>
-            <div class="description" v-if="showDescription[i][item]">
+            <div class="description" v-bind:class="{ isShowing: showDescription[i][item] }">
               {{broadTrait.facets[item].description}}
             </div>
           </div>
@@ -270,7 +270,16 @@ export default {
     }
     
     .description {
+      padding-bottom: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all .3s ease;
+    }
+    
+    .description.isShowing {
       padding-bottom: 5px;
+      max-height: 300px;
+      height: auto;
     }
     
     .title{
