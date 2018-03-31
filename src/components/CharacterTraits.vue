@@ -9,9 +9,18 @@
     <div class="traits" id="capture">
       <div class="broad-trait" v-for="(broadTrait, key, i) in broadTraits">
         <h2>
-          <span data-tooltip="description">{{broadTrait.title}}</span>
-          <span class="symbole">{{avarage(i,symbole)}}</span>
+          <span data-tooltip="description" v-on:click="showMain(i)" class="title">
+            {{broadTrait.title}}
+          </span>
+          <span class="symbole">{{avarage(i,symbole)}}</span> <br/>
+          <b v-on:click="showMain(i)">{{broadTrait.subtitle}}</b>
         </h2>
+        <div class="mainDescription" v-bind:class="{ isShowing: showMainDescription[i] }">
+          {{broadTrait.description}}. <br>
+          {{broadTrait.highScore}} <br>
+          {{broadTrait.lowScore}}
+        </div>
+
         <button class="button" type="button" v-on:click="minimize(i)">
           {{minimized[i] ? "▼" : "▲"}}
         </button>
@@ -80,8 +89,8 @@
         <div class="summary">
           {{broadTrait.approach}}:
           <ul>
-            <li v-for="(facet, index) in broadTrait.facets" v-if="scores[i][index] != 2">
-              {{scores[i][index] > 2 ? facet.Score["high"] : scores[i][index] < 2 ?  facet.Score["low"] : null}}
+            <li v-for="(facet, index) in broadTrait.facets" v-if="(facet.Score['middle'] != null && scores[i][index] == 2) || scores[i][index] != 2"><!--v-if="scores[i][index] != 2"-->
+              {{scores[i][index] > 2 ? facet.Score["high"] : scores[i][index] < 2 ?  facet.Score["low"] : facet.Score["middle"]}}
             </li>
           </ul>
           <p>
@@ -129,6 +138,7 @@ export default {
         middle : "=",
         low : "⇓"
       },
+      showMainDescription: [false,false,false,false,false],
       showDescription: [
         [false,false,false,false,false,false],
         [false,false,false,false,false,false],
@@ -149,6 +159,9 @@ export default {
     },
     show: function(i, item) {
       Vue.set(this.showDescription[i], item, !this.showDescription[i][item])
+    },
+    showMain: function(i) {
+      Vue.set(this.showMainDescription, i, !this.showMainDescription[i])
     },
     save: function(){
       localStorage.setItem("scores", JSON.stringify(this.scores));
@@ -230,10 +243,32 @@ export default {
   
   h2 {
     margin: 5px 0 5px 0;
+    line-height: 20px;
+    
+    .title {
+      cursor: pointer;  
+    }
     
     .symbole {
       font-size: 20px;
     }
+
+    b {
+      font-size: 15px;
+      cursor: pointer; 
+    }
+  }
+
+  .mainDescription {
+    padding-bottom: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .3s ease;
+  }
+    
+  .mainDescription.isShowing {
+    padding-bottom: 5px;
+    max-height: 200px;
   }
   
   .category{
@@ -279,7 +314,6 @@ export default {
     .description.isShowing {
       padding-bottom: 5px;
       max-height: 300px;
-      height: auto;
     }
     
     .title{

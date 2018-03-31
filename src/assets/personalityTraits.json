@@ -34,23 +34,25 @@
         "title" : "Tenderness", "weak" : "Logical", "strong" : "Compassionate",
         "Score" : {
           "high" : "Sympathize with the homeless", 
+          "middle" : "Does not so easily sympathize with the homeless",
           "low" : "Believe in eye for eye"
         },
         "description" : "People who score high on this scale are tender-hearted and compassionate. They feel the pain of others vicariously and are easily moved to pity. Low scorers are not affected strongly by human suffering. They pride themselves on making objective judgments based on reason. They are more concerned with truth and impartial justice than with mercy.",
         "negetivePerception":{
-          "high" : "",
-          "low" : "Heartless"
+          "high" : "Sentimental",
+          "low" : "Callous"
         }
       },
       {
         "title" : "Altruism", "weak" : "Individualistic", "strong" : "Selfless",
         "Score" : {
           "high" : "Make people feel welcomed", 
+          "middle" : "Striving to preserve an equal balance of giving and getting",
           "low" : "Look down on others"
         },
         "description" : "Altruistic people find helping other people genuinely rewarding. Consequently, they are generally willing to assist those who are in need. Altruistic people find that doing things for others is a form of self-fulfilment rather than self-sacrifice. Low scorers on this scale do not particularly like helping those in need. Requests for help feel like an imposition rather than an opportunity for self-fulfilment.",
         "negetivePerception":{
-          "high" : "",
+          "high" : "Bleeding heart",
           "low" : "Selfish"
         }
       },
@@ -58,18 +60,20 @@
         "title" : "Compliance", "weak" : "Commanding", "strong" : "Accommodating",
         "Score" : {
           "high" : "Easy to satisfy", 
+          "middle" : "Complies if request is fair",
           "low" : "Have a sharp tongue"
         },
         "description" : "Individuals who score high on this scale dislike confrontations. They are perfectly willing to compromise or to deny their own needs in order to get along with others. Those who score low on this scale are more likely to intimidate others to get their way.",
         "negetivePerception":{
           "high" : "Submissive",
-          "low" : ""
+          "low" : "Unreasonable"
         }
       },
       {
         "title" : "Modesty", "weak" : "Boastful", "strong" : "Humble",
         "Score" : {
           "high" : "Dislike being center of attention", 
+          "middle" : "Credit where credit is due",
           "low" : "Think highly of themself"
         },
         "description" : "High scorers on this scale do not like to claim that they are better than other people. In some cases this attitude may derive from low self-confidence or self-esteem. Nonetheless, some people with high self-esteem find immodesty unseemly. Those who are willing to describe themselves as superior tend to be seen as disagreeably arrogant by other people.",
@@ -82,6 +86,7 @@
         "title" : "Straightforwardness", "weak" : "Guarded", "strong" : "Honest",
         "Score" : {
           "high" : "Would never cheat on a exam", 
+          "middle" : "Softens the truth if expecting a harsh reaction", 
           "low" : "Use flattery to get ahead"
         },
         "description" : "High scorers on this scale see no need for pretence or manipulation when dealing with others and are therefore candid, frank, and sincere. Low scorers believe that a certain amount of deception in social relationships is necessary. People find it relatively easy to relate to the straightforward high-scorers on this scale. They generally find it more difficult to relate to the low-scorers on this scale. It should be made clear that low scorers are not unprincipled or immoral; they are simply more guarded and less willing to openly reveal the whole truth.",
@@ -114,6 +119,7 @@
         "title" : "Self-Efficacy", "weak" : "Doubtful", "strong" : "Independent",
         "Score" : {
           "high" : "Complete tasks successfully", 
+          "middle" : "Not confident unless grounds to believe they will succeed", 
           "low" : "Misjudge situations"
         },
         "description" : "This scale describes confidence in one's ability to accomplish things. High scorers believe they have the intelligence (common sense), drive, and self-control necessary for achieving success. Low scorers do not feel effective, and may have a sense that they are not in control of their lives.",
@@ -126,6 +132,7 @@
         "title" : "Achievement-Striving", "weak" : "Satisfied", "strong" : "Ambitious",
         "Score" : {
           "high" : "Work hard", 
+          "middle" : "Works hard if the reward is worth the effort",
           "low" : "Do just enough to get by"
         },
         "description" : "Individuals who score high on this scale strive hard to achieve excellence. Their drive to be recognized as successful keeps them on track toward their lofty goals. They often have a strong sense of direction in life, but extremely high scores may be too single-minded and obsessed with their work. Low scorers are content to get by with a minimal amount of work, and might be seen by others as lazy.",
@@ -138,9 +145,10 @@
         "title" : "Self-Discipline", "weak" : "Lax", "strong" : "Persistent",
         "Score" : {
           "high" : "Get chores done right away", 
+          "middle" : "Get tasks done by the time they have to be",  
           "low" : "Waste time"
         },
-        "description" : "Self-discipline-what many people call will-power-refers to the ability to persist at difficult or unpleasant tasks until they are completed. People who possess high self-discipline are able to overcome reluctance to begin tasks and stay on track despite distractions. Those with low self-discipline procrastinate and show poor follow-through, often failing to complete tasks-even tasks they want very much to complete.",
+        "description" : "(What many people call will-power) Refers to the ability to persist at difficult or unpleasant tasks until they are completed. People who possess high self-discipline are able to overcome reluctance to begin tasks and stay on track despite distractions. Those with low self-discipline procrastinate and show poor follow-through, often failing to complete tasks-even tasks they want very much to complete.",
         "negetivePerception":{
           "high" : "",
           "low" : ""
@@ -149,7 +157,8 @@
       {
         "title" : "Order", "weak" : "Disorganized", "strong" : "Well-organized",
         "Score" : {
-          "high" : "Like order", 
+          "high" : "Is well-organized", 
+          "middle" : "As organized as need be",  
           "low" : "Leave a mess"
         },
         "description" : "Persons with high scores on orderliness are well-organized. They like to live according to routines and schedules. They keep lists and make plans. Low scorers tend to be disorganized and scattered.",
@@ -162,6 +171,7 @@
         "title" : "Dutifulness", "weak" : "Free spirited", "strong" : "Responsible",
         "Score" : {
           "high" : "Follow the rules", 
+          "middle" : "Follow the rules if reasonable", 
           "low" : "Break rules"
         },
         "description" : "This scale reflects the strength of a person's sense of duty and obligation. Those who score high on this scale have a strong sense of moral obligation. Low scorers find contracts, rules, and regulations overly confining. They are likely to be seen as unreliable or even irresponsible.",
@@ -174,6 +184,7 @@
         "title" : "Cautiousness", "weak" : "Spontaneous", "strong" : "Premeditated",
         "Score" : {
           "high" : "Avoid mistakes", 
+          "middle" : "Take their time to make a decision if consequences are grave",  
           "low" : "Rush into things"
         },
         "description" : "Cautiousness describes the disposition to think through possibilities before acting. High scorers on the Cautiousness scale take their time when making decisions. Low scorers often say or do first thing that comes to mind without deliberating alternatives and the probable consequences of those alternatives.",
