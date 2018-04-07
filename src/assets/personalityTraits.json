@@ -230,6 +230,7 @@
         "title" : "Cheerfulness", "weak" : "Lukewarm", "strong" : "Lighthearted",
         "Score" : {
           "high" : "Radiate joy", 
+          "middle" : "Cheerful when something pleasant happen",  
           "low" : "Seldom amused"
         },
         "description" : "This scale measures positive mood and feelings, not negative emotions (which are a part of the Neuroticism domain). Persons who score high on this scale typically experience a range of positive feelings, including happiness, enthusiasm, optimism, and joy. Low scorers are not as prone to such energetic, high spirits.",
@@ -242,6 +243,7 @@
         "title" : "Friendliness", "weak" : "Reserved", "strong" : "Affectionate",
         "Score" : {
           "high" : "Make friends easily", 
+          "middle" : "", 
           "low" : "Hard to get to know"
         },
         "description" : "Friendly people genuinely like other people and openly demonstrate positive feelings toward others. They make friends quickly and it is easy for them to form close, intimate relationships. Low scorers on Friendliness are not necessarily cold and hostile, but they do not reach out to others and are perceived as distant and reserved.",

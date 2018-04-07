@@ -127,7 +127,7 @@ export default {
     return {
       broadTraits: traits,
       scores: [
-        [2,2,2,2,2,2],
+        [2,1,3,2,2,2],
         [2,2,2,2,2,2],
         [2,2,2,2,2,2],
         [2,2,2,2,2,2],
@@ -412,6 +412,17 @@ $color-3: #ff6600;
       transition: all .1s ease;
       vertical-align: middle;
       line-height: 22px;
+
+      position:relative;z-index:50;
+      &:before{
+          position:absolute;
+          content:'';
+          top:-10px;
+          right:0;
+          left:0;
+          bottom:-10px;
+          z-index:40;
+      }
 
       span {
         opacity: 0;
