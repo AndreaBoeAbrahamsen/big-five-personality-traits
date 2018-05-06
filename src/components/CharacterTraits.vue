@@ -9,10 +9,13 @@
     <div class="traits" id="capture">
       <div class="broad-trait" v-for="(broadTrait, key, i) in broadTraits">
         <h2>
-          <span data-tooltip="description" v-on:click="showMain(i)" class="title">
-            {{broadTrait.title}}
-          </span>
-          <span class="symbole">{{avarage(i,symbole)}}</span> <br/>
+          <div v-on:click="showMain(i)">
+            <span class="arrow">{{showMainDescription[i] ? "▼" : "►"}}&nbsp;</span>
+            <span data-tooltip="description" class="title">
+              {{broadTrait.title}}&nbsp;
+            </span>
+            <span class="symbole">{{avarage(i,symbole)}}</span>
+          </div>
           <b v-on:click="showMain(i)">{{broadTrait.subtitle}}</b>
         </h2>
         <div class="mainDescription" v-bind:class="{ isShowing: showMainDescription[i] }">
@@ -40,7 +43,8 @@
           <div class="facet" v-for="item in category">
             <div class="scoring">
               <div class="title" v-on:click="show(i, item)">
-              {{broadTrait.facets[item].title}} 
+                <span class="arrow"> {{showDescription[i][item] ? "▼" : "►"}}&nbsp;</span> 
+                <span>{{broadTrait.facets[item].title}}</span>
                 <!--<span class="symbole">{{scores[i][item] > 2 ? symbole.high : scores[i][item] < 2 ?  symbole.low : symbole.middle}}</span>-->
               </div>
               <div class="slider">
@@ -232,6 +236,10 @@ export default {
     display: flex;
     flex-direction: column;
     position: relative;
+
+    .arrow {
+      font-size: 15px;
+    }
     
     .button {
       position: absolute;
@@ -244,9 +252,14 @@ export default {
   h2 {
     margin: 5px 0 5px 0;
     line-height: 20px;
+
+    div {
+      display: flex;
+    }
     
     .title {
       cursor: pointer;  
+      font-size: 22px;
     }
     
     .symbole {
@@ -319,6 +332,12 @@ export default {
     .title{
       padding: 5px 0 5px 0;
       cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+
+      .arrow {
+        font-size: 12px;
+      }
       
       .symbole{
         font-size: 14px;
@@ -373,7 +392,7 @@ $color-3: #ff6600;
   
   div {
     display: inline-block;
-    width: 33.33%;
+    width: calc(100% / 3);;
     height: 100%;
     font-size: 15px;
     

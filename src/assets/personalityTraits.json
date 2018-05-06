@@ -146,7 +146,7 @@
         "Score" : {
           "high" : "Get chores done right away", 
           "middle" : "Get tasks done by the time they have to be",  
-          "low" : "Waste time"
+          "low" : "Wastes time"
         },
         "description" : "(What many people call will-power) Refers to the ability to persist at difficult or unpleasant tasks until they are completed. People who possess high self-discipline are able to overcome reluctance to begin tasks and stay on track despite distractions. Those with low self-discipline procrastinate and show poor follow-through, often failing to complete tasks-even tasks they want very much to complete.",
         "negetivePerception":{
@@ -243,7 +243,7 @@
         "title" : "Friendliness", "weak" : "Reserved", "strong" : "Affectionate",
         "Score" : {
           "high" : "Make friends easily", 
-          "middle" : "", 
+          "middle" : "Get along with people somewhat", 
           "low" : "Hard to get to know"
         },
         "description" : "Friendly people genuinely like other people and openly demonstrate positive feelings toward others. They make friends quickly and it is easy for them to form close, intimate relationships. Low scorers on Friendliness are not necessarily cold and hostile, but they do not reach out to others and are perceived as distant and reserved.",
@@ -256,6 +256,7 @@
         "title" : "Excitement-Seeking", "weak" : "Sensitive", "strong" : "Reckless",
         "Score" : {
           "high" : "Love excitement", 
+          "middle" : "Does not seek out excitment unless bored", 
           "low" : "Dislike loud music"
         },
         "description" : "High scorers on this scale are easily bored without high levels of stimulation. They love bright lights and hustle and bustle. They are likely to take risks and seek thrills. Low scorers are overwhelmed by noise and commotion and are adverse to thrill-seeking.",
@@ -268,7 +269,7 @@
         "title" : "Activity Level", "weak" : "Relaxed", "strong" : "Vigorous",
         "Score" : {
           "high" : "Always busy", 
-          "middle" : "Maintains a moderete level of activity",
+          "middle" : "Maintains an average level of activity",
           "low" : "Like to take it easy"
         },
         "description" : "Active individuals lead fast-paced, busy lives. They move about quickly, energetically, and vigorously, and they are involved in many activities. People who score low on this scale follow a slower and more leisurely, relaxed pace.",
@@ -281,6 +282,7 @@
         "title" : "Assertiveness", "weak" : "Timed", "strong" : "Confident",
         "Score" : {
           "high" : "Takes charge", 
+          "middle" : "Accepts some responsibility for others",
           "low" : "Waits for others to lead the way"
         },
         "description" : "High scorers Assertiveness like to speak out, take charge, and direct the activities of others. They tend to be leaders in groups. Low scorers tend not to talk much and let others control the activities of groups.",
@@ -337,6 +339,7 @@
         "title" : "Anxiety", "weak" : "Composed", "strong" : "Nervous",
         "Score" : {
           "high" : "Worry about things often", 
+          "middle" : "Will worry if cause for consern",
           "low" : "Relaxed most of the time"
         },
         "description" : "The 'fight-or-flight' system of the brain of anxious individuals is too easily and too often engaged. Therefore, people who are high in anxiety often feel like something dangerous is about to happen. They may be afraid of specific situations or be just generally fearful. They feel tense, jittery, and nervous. Persons low in Anxiety are generally calm and fearless.",
