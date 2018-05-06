@@ -314,7 +314,8 @@
       {
         "title" : "Hostility", "weak" : "Placid", "strong" : "Quick-tempered",
         "Score" : {
-          "high" : "Get angry easiliy", 
+          "high" : "Gets angry easiliy",
+          "middle" : "Only angered when things really do not go their way", 
           "low" : "Rarely get irritated"
         },
         "description" : "Persons who score high in Hostility feel enraged when things do not go their way. They are sensitive about being treated fairly and feel resentful and bitter when they feel they are being cheated. This scale measures the tendency to feel angry; whether or not the person expresses annoyance and hostility depends on the individual's level on Agreeableness. Low scorers do not get angry often or easily.",
@@ -327,6 +328,7 @@
         "title" : "Immoderation", "weak" : "Restrained", "strong" : "Craving",
         "Score" : {
           "high" : "Often eat too much (or overconsumption of anything of your choice)", 
+          "middle" : "",
           "low" : "Easily resist temptation"
         },
         "description" : " Immoderate individuals feel strong cravings and urges that they have difficulty resisting. They tend to be oriented toward short-term pleasures and rewards rather than long- term consequences. Low scorers do not experience strong, irresistible cravings and consequently do not find themselves tempted to overindulge.",
@@ -468,6 +470,7 @@
         "title" : "Liberalism", "weak" : "Conformer", "strong" : "Rebellious",
         "Score" : {
           "high" : "Tend to vote for liberals", 
+          "middle" : "",
           "low" : "Believes in one true releigion"
         },
         "description" : "Psychological liberalism refers to a readiness to challenge authority, convention, and traditional values. In its most extreme form, psychological liberalism can even represent outright hostility toward rules, sympathy for law-breakers, and love of ambiguity, chaos, and disorder. Psychological conservatives prefer the security and stability brought by conformity to tradition. Psychological liberalism and conservatism are not identical to political affiliation, but certainly incline individuals toward certain political parties.",

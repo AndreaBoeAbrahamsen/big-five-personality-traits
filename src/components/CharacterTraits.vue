@@ -10,9 +10,11 @@
       <div class="broad-trait" v-for="(broadTrait, key, i) in broadTraits">
         <h2>
           <div v-on:click="showMain(i)">
-            <span class="arrow">{{showMainDescription[i] ? "▼" : "►"}}&nbsp;</span>
+            <span class="arrow" v-bind:class="{ rotate: showMainDescription[i] }">
+              ► <!--{{showMainDescription[i] ? "▼" : "►"}}-->
+            </span>
             <span data-tooltip="description" class="title">
-              {{broadTrait.title}}&nbsp;
+              &nbsp;{{broadTrait.title}}&nbsp;
             </span>
             <span class="symbole">{{avarage(i,symbole)}}</span>
           </div>
@@ -43,8 +45,10 @@
           <div class="facet" v-for="item in category">
             <div class="scoring">
               <div class="title" v-on:click="show(i, item)">
-                <span class="arrow"> {{showDescription[i][item] ? "▼" : "►"}}&nbsp;</span> 
-                <span>{{broadTrait.facets[item].title}}</span>
+                <span class="arrow"  v-bind:class="{ rotate: showDescription[i][item] }"> 
+                  ► <!--{{showDescription[i][item] ? "▼" : "►"}}-->
+                </span> 
+                <span>&nbsp;{{broadTrait.facets[item].title}}</span>
                 <!--<span class="symbole">{{scores[i][item] > 2 ? symbole.high : scores[i][item] < 2 ?  symbole.low : symbole.middle}}</span>-->
               </div>
               <div class="slider">
@@ -239,6 +243,11 @@ export default {
 
     .arrow {
       font-size: 15px;
+      transition: transform .3s ease;
+    }
+
+    .rotate {
+      transform: rotateZ(90deg);
     }
     
     .button {
@@ -337,6 +346,11 @@ export default {
 
       .arrow {
         font-size: 12px;
+        transition: transform .3s ease;
+      }
+
+      .rotate {
+        transform: rotateZ(90deg);
       }
       
       .symbole{
